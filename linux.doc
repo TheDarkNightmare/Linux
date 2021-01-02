@@ -1,7 +1,7 @@
 
 WINE Layer
 
-Antergos/Manjaro/Arch derivatives (enable multilib in pacman.conf):
+** Antergos/Manjaro/Arch derivatives (enable multilib in pacman.conf):
 
 sudo pacman -Sy
 sudo pacman -S wine-staging winetricks
