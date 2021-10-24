@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-#-------------------------------------------------------------------------
-#-------------------------------------------------------------------------
+
+
 echo "--------------------------------------"
 echo "--          Network Setup           --"
 echo "--------------------------------------"
@@ -9,7 +9,7 @@ pacman -S networkmanager dhclient --noconfirm --needed
 systemctl enable --now NetworkManager
 
 echo "-------------------------------------------------"
-echo "Setting up mirrors for optimal download          "
+echo "MIRRORS SETUP"
 echo "-------------------------------------------------"
 pacman -S --noconfirm pacman-contrib curl
 pacman -S --noconfirm reflector rsync
@@ -25,7 +25,7 @@ echo "Changing the compression settings for "$nc" cores."
 sudo sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -T $nc -z -)/g' /etc/makepkg.conf
 
 echo "-------------------------------------------------"
-echo "       Setup Language to US and set locale       "
+echo "       Language to PL"
 echo "-------------------------------------------------"
 sed -i 's/^#pl_PL.UTF-8 UTF-8/pl_PL.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
@@ -261,7 +261,7 @@ fi
 
 echo -e "\nDone!\n"
 if ! source install.conf; then
-	read -p "Please enter username:" username
+	read -p "User:" username
 echo "username=$username" >> ${HOME}/TheDarkNightmare/install.conf
 fi
 if [ $(whoami) = "root"  ];
