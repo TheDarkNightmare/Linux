@@ -220,6 +220,7 @@ PKGS=(
 'xorg'
 'xorg-server'
 'xorg-xinit'
+'yay'
 'zeroconf-ioslave'
 'zip'
 'zsh'
