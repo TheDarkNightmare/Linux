@@ -3,7 +3,7 @@ import subprocess
 import time
 
 # Set the MAC address of your PS4 controller
-controller_mac_address = 'MAC ADRES HERE'  # Replace with your controller's MAC address
+controller_mac_address = '88:03:4C:FF:18:53'  # Replace with your controller's MAC address
 
 def pair_ps4_controller():
     try:
