@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Razer CLI
+Comment=Command-line interface for Razer devices
+Icon=razer-icon    # Specify the name of the icon file (without the extension)
+Exec=razer-cli     # Specify the command to run when the application is launched
+Categories=Hardware;Utility;
+Terminal=true
