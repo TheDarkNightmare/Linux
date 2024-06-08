@@ -4,9 +4,9 @@
 echo "[    FastFetch - System User Configuration    ]"
 echo "[ Version 1.01 - TheDarkNightmare - PulseTools ]"
 
-# Update the package database and install CUPS (Common Unix Printing System) and Gutenprint
+# Install fastfetch 
 sudo pacman -Syu --noconfirm fastfetch
-
+# Generate a cfg file and folder
 fastfetch --gen-config
 
 cd ~/.config/fastfetch/
