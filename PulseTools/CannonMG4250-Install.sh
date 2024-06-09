@@ -1,7 +1,13 @@
+ 
 #!/bin/bash
 
-echo "[    Cannon MG4250 Printer Drivers Install     ]"
-echo "[ Version 1.01 - TheDarkNightmare - PulseTools ]"
+echo "[----------------------------------------------]"
+echo "|                                              |"
+echo "|    Cannon MG4250 Printer Drivers Install     |"
+echo "|                                              |"
+echo "| Version 1.01 - TheDarkNightmare - PulseTools |"
+echo "|                                              |"
+echo "[----------------------------------------------]"
 
 # Update the package database and install CUPS (Common Unix Printing System) and Gutenprint
 sudo pacman -Syu --noconfirm cups gutenprint
