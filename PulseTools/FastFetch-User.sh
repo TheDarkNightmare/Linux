@@ -4,15 +4,21 @@
 echo "[    FastFetch - System User Configuration    ]"
 echo "[ Version 1.01 - TheDarkNightmare - PulseTools ]"
 
-# Install fastfetch 
+# Update the package database and install CUPS (Common Unix Printing System) and Gutenprint
 sudo pacman -Syu --noconfirm fastfetch
-# Generate a cfg file and folder
+
 fastfetch --gen-config
 
 cd ~/.config/fastfetch/
 
 wget -O config.jsonc https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/config.jsonc
+wget -O ARC2.png https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/ARC2.png
+kfontview SymbolsNerdFontMono-Regular.ttf https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/SymbolsNerdFontMono-Regular.ttf
+kfontview https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/SymbolsNerdFont-Regular.ttf
 
-# Print a message indicating that the installation is complete
+
+
+
+
 echo "Installation complete. Please check your fastfetch settings"
 
