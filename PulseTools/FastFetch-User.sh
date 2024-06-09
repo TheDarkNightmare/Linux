@@ -9,12 +9,21 @@ sudo pacman -Syu --noconfirm fastfetch
 
 fastfetch --gen-config
 
+sleep 5
+
 cd ~/.config/fastfetch/
+rm ./config.jsonc
+
+sleep 5
 
 wget -O config.jsonc https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/config.jsonc
 wget -O ARC2.png https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/ARC2.png
+
+sleep 5
 kfontview SymbolsNerdFontMono-Regular.ttf https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/SymbolsNerdFontMono-Regular.ttf
-kfontview https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/SymbolsNerdFont-Regular.ttf
+
+sleep 5
+kfontview SymbolsNerdFont-Regular https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/SymbolsNerdFont-Regular.ttf
 
 
 
