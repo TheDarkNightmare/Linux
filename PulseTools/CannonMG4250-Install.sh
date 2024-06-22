@@ -1,4 +1,3 @@
- 
 #!/bin/bash
 
 echo "[----------------------------------------------]"
@@ -8,6 +7,19 @@ echo "|                                              |"
 echo "| Version 1.01 - TheDarkNightmare - PulseTools |"
 echo "|                                              |"
 echo "[----------------------------------------------]"
+
+# Check if paru is installed
+if ! command -v paru &> /dev/null
+then
+    echo "paru is not installed. Installing paru..."
+    # Install paru if not installed - First Base package dev.
+    sudo pacman -S --needed --noconfirm base-devel
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si --noconfirm
+    cd ..
+    rm -rf paru
+fi
 
 # Update the package database and install CUPS (Common Unix Printing System) and Gutenprint
 sudo pacman -Syu --noconfirm cups gutenprint
@@ -20,4 +32,3 @@ sudo systemctl enable --now cups
 
 # Print a message indicating that the installation is complete
 echo "Installation complete. Please add your printer via KDE Printer Settings"
-

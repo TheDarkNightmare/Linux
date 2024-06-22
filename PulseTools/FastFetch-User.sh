@@ -4,7 +4,7 @@ echo "[----------------------------------------------]"
 echo "|                                              |"
 echo "|    FastFetch - System User Configuration     |"
 echo "|                                              |"
-echo "| Version 1.04 - TheDarkNightmare - PulseTools |"
+echo "| Version 1.05 - TheDarkNightmare - PulseTools |"
 echo "|                                              |"
 echo "[----------------------------------------------]"
 
