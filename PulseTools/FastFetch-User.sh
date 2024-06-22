@@ -29,8 +29,11 @@ if [ -d "$HOME/KWinScripts/" ]; then
     wget -O config.jsonc https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/config.jsonc
     wget -O ARC2.png https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/ARC2.png
 
-    mv config.jsonc $HOME/KWinScripts/
+    # Coping config file to destination
+    cp config.jsonc $HOME/.config/fastfetch
 
+    # Cleaning downloaded config form temp location.
+    rm config.jsonc
     sleep 5
 
     # Pulling font icons from repo.
@@ -55,7 +58,13 @@ else
         wget -O config.jsonc https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/config.jsonc
         wget -O ARC2.png https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/ARC2.png
 
+        # Coping config file to destination
+        cp config.jsonc $HOME/.config/fastfetch
+
+        # Cleaning downloaded config form temp location.
+        rm config.jsonc
         sleep 5
+
         kfontview https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/SymbolsNerdFontMono-Regular.ttf
 
         sleep 5
