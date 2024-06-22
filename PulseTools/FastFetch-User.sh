@@ -29,14 +29,16 @@ if [ -d "$HOME/KWinScripts/" ]; then
     wget -O config.jsonc https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/config.jsonc
     wget -O ARC2.png https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/ARC2.png
 
+    mv config.jsonc $HOME/KWinScripts/
+
     sleep 5
 
-    # Pulling font icons from repo
+    # Pulling font icons from repo.
     kfontview https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/SymbolsNerdFontMono-Regular.ttf
 
     sleep 5
 
-    # Pulling font icons from repo
+    # Pulling font icons from repo.
     kfontview https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/SymbolsNerdFont-Regular.ttf
 
     echo "Installation complete. Please check your fastfetch settings"
