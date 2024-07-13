@@ -26,11 +26,16 @@ then
 fi
 
 echo "[----------------- Discord Addons ----------------]"
+# Install Betterdiscord for apllying new Theme and Plugins.
 yay -S --noconfirm betterdiscord-installer
 
 echo "[----------------- OBS Studio + Addons ----------------]"
 # Install OBS Studio with Browser Extension + VKCapture + VAAPI - 
 yay -S --noconfirm obs-studio-browser obs-vkcapture obs-vaapi obs-cmd lib32-obs-vkacapture
+
+echo "[----------------- Video Capture Fix ----------------]"
+# Install XWaylandVideoBridge for screenshare for discord and settings discord to start up as X11 TYPE SESSION 
+sudo pacman -S --noconfirm xwaylandvideobridge
 
 # Install Spotify
 yay -S --noconfirm spotify
