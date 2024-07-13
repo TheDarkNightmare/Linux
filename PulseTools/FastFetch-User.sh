@@ -4,7 +4,7 @@ echo "[----------------------------------------------]"
 echo "|                                              |"
 echo "|    FastFetch - System User Configuration     |"
 echo "|                                              |"
-echo "| Version 1.05 - TheDarkNightmare - PulseTools |"
+echo "| Version 1.06 - TheDarkNightmare - PulseTools |"
 echo "|                                              |"
 echo "[----------------------------------------------]"
 
@@ -17,7 +17,7 @@ fastfetch --gen-config
 sleep 5
 
 # Removing default config for new one
-rm ./config.jsonc
+rm ~/.config/fastfetch/config.jsonc
 
 # Check if the directory exists
 if [ -d "$HOME/KWinScripts/" ]; then
@@ -29,10 +29,10 @@ if [ -d "$HOME/KWinScripts/" ]; then
     wget -O config.jsonc https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/config.jsonc
     wget -O ARC2.png https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/ARC2.png
 
-    # Coping config file to destination
-    cp config.jsonc $HOME/.config/fastfetch
+    # Copying config file to destination
+    cp config.jsonc ~/.config/fastfetch/
 
-    # Cleaning downloaded config form temp location.
+    # Cleaning downloaded config from temp location.
     rm config.jsonc
     sleep 5
 
@@ -58,17 +58,30 @@ else
         wget -O config.jsonc https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/config.jsonc
         wget -O ARC2.png https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/ARC2.png
 
-        # Coping config file to destination
-        cp config.jsonc $HOME/.config/fastfetch
+        # Copying config file to destination
+        cp config.jsonc ~/.config/fastfetch/
 
-        # Cleaning downloaded config form temp location.
+        # Cleaning downloaded config from temp location.
         rm config.jsonc
         sleep 5
 
+        # Pulling font icons from repo.
         kfontview https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/SymbolsNerdFontMono-Regular.ttf
 
         sleep 5
+        # Pulling font icons from repo.
         kfontview https://raw.githubusercontent.com/TheDarkNightmare/Linux/main/PulseTools/Files/SymbolsNerdFont-Regular.ttf
+
+        # The command to add to .bashrc
+        COMMAND="fastfetch"
+
+        # Check if the command already exists in .bashrc
+        if ! grep -q "$COMMAND" ~/.bashrc; then
+            echo "$COMMAND" >> ~/.bashrc
+            echo "Added '$COMMAND' to ~/.bashrc"
+        else
+            echo "'$COMMAND' is already in ~/.bashrc"
+        fi
 
         echo "Installation complete. Please check your fastfetch settings"
     else
