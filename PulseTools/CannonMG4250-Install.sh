@@ -18,7 +18,7 @@ then
     cd yay
     makepkg -si --noconfirm
     cd ..
-    rm -rf paru
+    rm -rf yay
 fi
 
 # Update the package database and install CUPS (Common Unix Printing System) and Gutenprint
